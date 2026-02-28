@@ -1,4 +1,4 @@
-// Question 1: Interactive Sidebar
+// Question 1: Interractive Sidebar
 const question1 = () => {
     const sidebar = document.getElementById("sidebar");
     const sidebarButton = document.getElementById("sidebar-button");
@@ -23,7 +23,7 @@ const question2 = () => {
     addButton.addEventListener("click", () => {
         const taskText = taskInput.value;
 
-        if (taskText === "") {
+        if (!taskText.trim()) {
             return;
         }
 
@@ -51,7 +51,7 @@ const question3 = () => {
     lastNameInput.addEventListener("input", updateMessage);
 };
 
-// Entry point — runs after the page fully loads
+// Entry point — runs after the page  loads
 document.addEventListener("DOMContentLoaded", (event) => {
     question1();
     question2();
