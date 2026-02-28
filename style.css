@@ -1,0 +1,160 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f9f5f0;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 240px;
+    height: 100%;
+    background-color: #4a3728;
+    color: #f9f5f0;
+    transition: left 0.3s ease;
+    z-index: 100;
+    padding: 60px 20px 20px;
+}
+
+#sidebar.opened {
+    left: 0;
+}
+
+#sidebar nav h2 {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#sidebar nav ul {
+    list-style: none;
+}
+
+#sidebar nav ul li {
+    margin-bottom: 12px;
+}
+
+#sidebar nav ul li a {
+    color: #f9f5f0;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#sidebar-button {
+    position: fixed;
+    top: 16px;
+    left: 12px;
+    z-index: 200;
+    background-color: #4a3728;
+    color: #f9f5f0;
+    border: none;
+    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+}
+
+/* Main content */
+main {
+    margin-left: 0;
+    padding: 40px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #4a3728;
+}
+
+hr {
+    margin: 32px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: #4a3728;
+}
+
+/* TODO list */
+#task-name {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 240px;
+}
+
+#add-todo {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #4a3728;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-todo:hover {
+    background-color: #6b5040;
+}
+
+#todo-list {
+    margin-top: 16px;
+    padding-left: 20px;
+}
+
+#todo-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Greeter */
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+label input {
+    margin-left: 8px;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#message {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4a3728;
+}
